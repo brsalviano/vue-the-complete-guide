@@ -6,7 +6,8 @@ const app = Vue.createApp({
     //deve ser este nome e necessáriamente deve retornar um objeto, com as nossas propriedades específicas da aplicação
     data() {
         return {
-            courseGoal: 'Finish the course and learn Vue!'
+            courseGoal: 'Finish the course and learn Vue!',
+            vueLink: 'https://vuejs.org/'
         }
     }
 });
