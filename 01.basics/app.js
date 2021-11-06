@@ -6,7 +6,8 @@ const app = Vue.createApp({
     //deve ser este nome e necessáriamente deve retornar um objeto, com as nossas propriedades específicas da aplicação
     data() {
         return {
-            courseGoal: 'Finish the course and learn Vue!',
+            courseGoalA: 'Finish the course and learn Vue!',
+            courseGoalB: 'Master Vue and build amazing apps!',
             vueLink: 'https://vuejs.org/'
         }
     },
@@ -14,9 +15,9 @@ const app = Vue.createApp({
         outputGoal() {
             const randomNumber = Math.random();
             if (randomNumber < 0.5) {
-                return 'Learn Vue!';
+                return this.courseGoalA;
             } else {
-                return 'Master Vue!';
+                return this.courseGoalB;
             }
         }
     }
