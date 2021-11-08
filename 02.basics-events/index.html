@@ -23,6 +23,12 @@
       <button v-on:click="add(10)">Add</button>
       <button v-on:click="reduce(5)">Reduce</button>
       <p>Result: {{ counter }}</p>
+      <!-- Quando associamos um evento e não passamos nenhum parâmetro, por padrão é passado o Event nativo do javascript-->
+      <input type="text" v-on:input="setName">
+      <!-- Se quisessemos passar um argumento personalizado mas mantendo o evento padrão como primeiro argumento, podemos usar
+      a variável $event. Ex: -->
+      <!-- <input type="text" v-on:input="setName($event)"> -->
+      <p>Your Name: {{ name }}</p>
     </section>
   </body>
 </html>
