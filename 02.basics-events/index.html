@@ -20,8 +20,9 @@
       <h2>Events in Action</h2>
       <button v-on:click="add(10)">Add</button>
       <button v-on:click.right="reduce(5)">Reduce</button>
+      <!-- v-once na prática -->
+      <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
-      <!-- Podemos ter mais de um evento em um elemento! -->
       <input type="text" v-on:input="setName" 
         v-on:keyup.enter="confirmInput">
       <p>Your Name: {{ confirmedName }}</p>
