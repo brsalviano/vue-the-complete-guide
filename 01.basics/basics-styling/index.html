@@ -17,17 +17,17 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
-      <!-- uma forma de adicionar estilo com classe é usando uma expressão js -->
+      <!-- Quando a lógica for mais complexa, podemos usar computed properties para nos ajudar na definição das classes ativas -->
       <div
-        :class="boxASelected ? 'demo active': 'demo'"
+        :class="boxAClasses"
       @click="boxSelected('A')"></div>
 
-      <!-- Outra forma é passando um objeto onde as chaves são os nomes das classes e o valor é seu status de utilização (true ou false) -->
+      <!-- Ainda existe a sintaxe que usa um array onde passamos o nome da classe ou o objeto com o nome da classe e o valor atual da ativação (true ou false) -->
       <div
-        :class="{demo: true, active: boxBSelected}"
+        :class="['demo', {active: boxBSelected}]"
       @click="boxSelected('B')"></div>
 
-      <!-- Sem uma classe é fixa, podemos adiciona-la no estilo com class normalmente, sem fazer o bind. No fim, a parte do v-bind:class será mesclada e não temos problemas. -->
+
       <div class="demo"
       :class="{active: boxCSelected}" 
       @click="boxSelected('C')"></div>
